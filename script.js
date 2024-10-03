@@ -1,4 +1,10 @@
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
-    document.body.style.backgroundColor = `rgb(${scrollPosition % 255}, ${200 - scrollPosition % 255}, ${150})`;
+    const body = document.body;
+
+    if (scrollPosition > 0) {
+        body.classList.add('scrolled');
+    } else {
+        body.classList.remove('scrolled');
+    }
 });
