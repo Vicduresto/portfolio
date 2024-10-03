@@ -3,7 +3,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    transition: background-color 0.5s ease;
+    color: #555;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
@@ -39,14 +41,11 @@ section {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    transition: background-color 0.5s ease;
 }
 
-#about {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-#projects {
-    background: rgba(255, 255, 255, 0.8);
+#about, #projects, #contact {
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .project {
@@ -60,10 +59,6 @@ section {
 
 .project:hover {
     transform: translateY(-5px);
-}
-
-#contact {
-    background: rgba(255, 255, 255, 0.8);
 }
 
 form {
@@ -104,12 +99,23 @@ footer {
     color: #fff;
 }
 
-@keyframes changeColor {
-    0% { background-color: #ffffff; }
-    50% { background-color: #f0f8ff; }
-    100% { background-color: #ffffff; }
+.content {
+    height: 150vh; /* Augmente la hauteur pour permettre plus de défilement */
 }
 
-body {
-    animation: changeColor 10s infinite alternate;
+.scroll-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    transition: transform 0.5s ease;
+    z-index: -1; /* derrière tout */
+}
+
+.scrolled .scroll-effect {
+    transform: translateY(100%);
+    background-color: #555;
 }
