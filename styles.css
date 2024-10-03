@@ -3,8 +3,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #fff; /* Texte blanc par défaut */
-    background-color: #555; /* Fond gris par défaut */
+    color: white; /* Texte blanc par défaut */
+    background-color: white; /* Fond blanc par défaut */
     transition: color 0.5s ease, background-color 0.5s ease;
 }
 
@@ -42,7 +42,7 @@ section {
     position: relative;
     overflow: hidden;
     transition: background-color 0.5s ease;
-    background: #888; /* Arrière-plan gris par défaut */
+    background: #888; /* Blocs gris par défaut */
 }
 
 .project {
@@ -97,7 +97,7 @@ footer {
 }
 
 .content {
-    height: 150vh; /* Augmente la hauteur pour permettre plus de défilement */
+    height: 200vh; /* Augmente la hauteur pour permettre plus de défilement */
 }
 
 .scroll-effect {
@@ -114,6 +114,11 @@ footer {
 
 .scrolled .scroll-effect {
     opacity: 1; /* Devenir opaque */
+}
+
+.scrolled body {
+    background-color: #555; /* Devenir gris */
+    color: white; /* Texte blanc */
 }
 
 .scrolled section {
