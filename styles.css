@@ -3,9 +3,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #555;
-    background-color: white;
-    transition: color 0.5s ease;
+    color: #fff; /* Texte blanc par défaut */
+    background-color: #555; /* Fond gris par défaut */
+    transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 header {
@@ -42,14 +42,14 @@ section {
     position: relative;
     overflow: hidden;
     transition: background-color 0.5s ease;
-    background: rgba(255, 255, 255, 0.9);
+    background: #888; /* Arrière-plan gris par défaut */
 }
 
 .project {
     border-radius: 15px;
     padding: 20px;
     margin: 15px 0;
-    background: #e0e0e0;
+    background: #666; /* Couleur des projets en gris */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
 }
@@ -114,4 +114,12 @@ footer {
 
 .scrolled .scroll-effect {
     opacity: 1; /* Devenir opaque */
+}
+
+.scrolled section {
+    background: rgba(255, 255, 255, 0.9); /* Devenir blanc après défilement */
+}
+
+.scrolled .project {
+    background: #e0e0e0; /* Les projets deviennent clairs */
 }
